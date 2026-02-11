@@ -250,6 +250,22 @@ document.head.appendChild(style);
 // Create random twinkles
 setInterval(createTwinkle, 300);
 
+// Create floating background stars
+function createFloatingStars() {
+    for (let i = 0; i < 100; i++) {
+        const star = document.createElement('div');
+        star.className = 'floating-star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 3 + 's';
+        star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        document.body.appendChild(star);
+    }
+}
+
+// Initialize floating stars on page load
+createFloatingStars();
+
 // Add cursor trail effect (optional)
 let mouseX = 0;
 let mouseY = 0;
