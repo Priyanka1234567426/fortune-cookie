@@ -13,13 +13,64 @@
     <div class="container">
         <div class="glow-orb"></div>
         
-        <h1 class="main-title">
-            <span class="title-word">Friendship</span>
-            <span class="title-word">Fortune</span>
-            <span class="title-word">Cookie</span>
-        </h1>
+        <!-- Name Input Screen -->
+        <div class="welcome-screen" id="welcomeScreen">
+            <h1 class="main-title">
+                <span class="title-word">Friendship</span>
+                <span class="title-word">Fortune</span>
+                <span class="title-word">Cookie</span>
+            </h1>
+            <p class="subtitle">A special message just for you! ✨</p>
+            
+            <div class="input-card">
+                <label for="nameInput">What's your name?</label>
+                <input type="text" id="nameInput" placeholder="Enter your name..." maxlength="20">
+                <button class="continue-btn" id="continueBtn">Continue →</button>
+            </div>
+        </div>
         
-        <p class="subtitle">Click the magical cookie to reveal your fortune</p>
+        <!-- Mood Selector Screen -->
+        <div class="mood-screen hidden" id="moodScreen">
+            <h2 class="mood-title">Hey <span id="displayName"></span>! 👋</h2>
+            <p class="mood-subtitle">How are you feeling today?</p>
+            
+            <div class="mood-grid">
+                <button class="mood-btn" data-mood="happy">
+                    <span class="mood-emoji">😊</span>
+                    <span class="mood-label">Happy</span>
+                </button>
+                <button class="mood-btn" data-mood="sad">
+                    <span class="mood-emoji">😔</span>
+                    <span class="mood-label">Sad</span>
+                </button>
+                <button class="mood-btn" data-mood="excited">
+                    <span class="mood-emoji">🤩</span>
+                    <span class="mood-label">Excited</span>
+                </button>
+                <button class="mood-btn" data-mood="stressed">
+                    <span class="mood-emoji">😰</span>
+                    <span class="mood-label">Stressed</span>
+                </button>
+                <button class="mood-btn" data-mood="missing">
+                    <span class="mood-emoji">🥺</span>
+                    <span class="mood-label">Missing You</span>
+                </button>
+                <button class="mood-btn" data-mood="chill">
+                    <span class="mood-emoji">😎</span>
+                    <span class="mood-label">Just Vibing</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Main Cookie Screen -->
+        <div class="cookie-screen hidden" id="cookieScreen">
+            <h1 class="main-title">
+                <span class="title-word">Friendship</span>
+                <span class="title-word">Fortune</span>
+                <span class="title-word">Cookie</span>
+            </h1>
+            
+            <p class="subtitle">Click the magical cookie to reveal your fortune</p>
         
         <div class="cookie-scene">
             <div class="cookie-wrapper" id="cookieWrapper">
@@ -63,7 +114,9 @@
                 <span class="stat-label">Cookies Cracked</span>
             </div>
         </div>
-    </div>
+        
+        </div><!-- End cookie-screen -->
+    </div><!-- End container -->
     
     <canvas id="particleCanvas"></canvas>
     
