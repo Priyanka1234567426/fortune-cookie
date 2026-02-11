@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Friendship Fortune Cookie ✨</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <div class="container">
+        <div class="glow-orb"></div>
+        
+        <h1 class="main-title">
+            <span class="title-word">Friendship</span>
+            <span class="title-word">Fortune</span>
+            <span class="title-word">Cookie</span>
+        </h1>
+        
+        <p class="subtitle">Click the magical cookie to reveal your fortune</p>
+        
+        <div class="cookie-scene">
+            <div class="cookie-wrapper" id="cookieWrapper">
+                <div class="cookie-glow"></div>
+                <div class="cookie" id="cookie">
+                    <div class="cookie-piece left-piece">
+                        <div class="cookie-texture"></div>
+                        <div class="cookie-shine"></div>
+                    </div>
+                    <div class="cookie-piece right-piece">
+                        <div class="cookie-texture"></div>
+                        <div class="cookie-shine"></div>
+                    </div>
+                    <div class="cookie-crack"></div>
+                </div>
+                <div class="sparkles" id="sparkles"></div>
+            </div>
+            
+            <div class="fortune-container" id="fortuneContainer">
+                <div class="fortune-scroll">
+                    <div class="scroll-top"></div>
+                    <div class="scroll-middle">
+                        <p id="fortuneText" class="fortune-text"></p>
+                    </div>
+                    <div class="scroll-bottom"></div>
+                </div>
+                <div class="fortune-glow"></div>
+            </div>
+        </div>
+        
+        <button class="action-btn" id="resetBtn">
+            <span class="btn-icon">🥠</span>
+            <span class="btn-text">Get Another Fortune</span>
+            <div class="btn-shine"></div>
+        </button>
+        
+        <div class="stats" id="stats">
+            <div class="stat-item">
+                <span class="stat-emoji">🎉</span>
+                <span class="stat-number" id="cookieCount">0</span>
+                <span class="stat-label">Cookies Cracked</span>
+            </div>
+        </div>
+    </div>
+    
+    <canvas id="particleCanvas"></canvas>
+    
+    <script src="script.js"></script>
+</body>
+</html>
