@@ -1,28 +1,138 @@
 // ✨ CUSTOMIZE YOUR MESSAGES HERE! ✨
-const fortunes = [
-    "Remember when we laughed until we cried? That's the energy you bring to my life! 💖",
-    "Distance means nothing when friendship means everything. You're always in my heart! 💙",
-    "You're the friend who makes boring stuff fun and fun stuff unforgettable! 🎉",
-    "Our inside jokes > everyone else's entire sense of humor 😎✨",
-    "Thanks for being the person I can send random memes to at 3 AM 📱🌙",
-    "You're not just a friend, you're my chosen family 💜🏠",
-    "Even miles apart, you're always close to my heart ❤️🌍",
-    "Can't wait for our next adventure together! 🚀🌟",
-    "You make life brighter just by being you ✨😊",
-    "Friendship level: We don't need to talk every day to know we're always there 🤝💫",
-    "You're the reason I believe in good people 🌟👑",
-    "Our friendship is like a good playlist - never gets old! 🎵🎶",
-    "Thanks for being weird with me. Normal friends are overrated! 🤪🦄",
-    "You're proof that the best things in life aren't things - they're people 🥰💝",
-    "Every time I think of you, I smile. That's real friendship! 😊🌈",
-    "You're the friend who knows all my stories but still wants to hear them again 📖💕",
-    "Life gave me a best friend and I got YOU - total jackpot! 🎰✨",
-    "Thanks for accepting my weirdness and raising the bar! 🚀😜",
-    "You're like a human version of a warm hug 🤗💛",
-    "Our friendship is the kind movies are made about 🎬⭐"
+
+// Inside Jokes - Add your own!
+const insideJokes = [
+    "remember that time we {joke}?",
+    "still can't believe we {joke}!",
+    "{joke} - classic us!",
+    "the {joke} incident will never be forgotten 😂"
+];
+
+// Replace with your actual inside jokes
+const jokes = [
+    "couldn't stop laughing at that meme",
+    "had that epic food adventure",
+    "stayed up all night talking",
+    "made that ridiculous plan",
+    "tried to cook and failed spectacularly",
+    "went on that crazy adventure",
+    "did the thing we said we'd never do",
+    "created our secret handshake"
+];
+
+// Mood-based Fortunes with {name} placeholder
+const moodFortunes = {
+    happy: [
+        "Hey {name}! Your smile is contagious and today proves it! Keep shining! ✨",
+        "{name}, your happiness is making the world brighter! Love seeing you this joyful! 🌟",
+        "Yay {name}! This energy? It's what makes our friendship amazing! 🎉",
+        "{name}, you're radiating good vibes and I'm here for it! Keep it up! 💫",
+        "Dear {name}, happiness looks SO good on you! Never change! 😊",
+        "{name}, your joy is literally infectious! Spreading smiles everywhere! 🌈"
+    ],
+    sad: [
+        "{name}, tough days don't last but our friendship does. Here for you always 💙",
+        "Hey {name}, it's okay to not be okay. Want to talk? I'm just a text away 🤗",
+        "{name}, sending you the biggest virtual hug right now. You're stronger than you know 💪",
+        "Listen {name}, bad days happen but you're not alone in this. I got you! 💕",
+        "{name}, remember: this too shall pass. And I'll be right here with you 🌈",
+        "{name}, even on cloudy days, you're still a star. Hang in there! ⭐"
+    ],
+    excited: [
+        "{name}!! YOUR EXCITEMENT IS CONTAGIOUS! What's got you so hyped?! 🚀",
+        "OMG {name}! I can feel your energy through the screen! LOVE IT! 🤩",
+        "{name}, this is YOUR moment! Go crush whatever you're excited about! 🔥",
+        "YESSS {name}! Channel that excitement into something AMAZING! ⚡",
+        "{name}, your enthusiasm makes everything more fun! Never lose that! 🎊",
+        "WOOHOO {name}! Ride this wave of excitement all the way! 🌊"
+    ],
+    stressed: [
+        "{name}, take a deep breath. You've got this. I believe in you! 🌸",
+        "Hey {name}, stress is temporary but your strength is permanent. You're doing great! 💪",
+        "{name}, remember to be kind to yourself. You're handling more than anyone knows 💙",
+        "Listen {name}, one step at a time. You don't have to do it all at once 🌿",
+        "{name}, even on your worst day, you're still amazing. Don't forget that! ✨",
+        "{name}, pause, breathe, and know that you're crushing it even when it doesn't feel like it! 🧘"
+    ],
+    missing: [
+        "{name}, distance can't dim our friendship! Missing you SO much right now! 🥺",
+        "Hey {name}, thinking of you and all our amazing memories together! Come back soon! 💕",
+        "{name}, miles apart but always close at heart. Can't wait for our next adventure! 🌍",
+        "Dear {name}, our friendship is worth every mile between us. Miss your face! 😊",
+        "{name}, counting down the days until we're together again! You're irreplaceable! 💫",
+        "{name}, no amount of distance can break what we have. See you soon! ❤️"
+    ],
+    chill: [
+        "{name}, loving the chill vibes! Sometimes just existing together is enough 😎",
+        "Hey {name}, not every moment needs to be epic. This is nice too! 🌊",
+        "{name}, your calm energy is exactly what I needed today. Thanks for being you! ☁️",
+        "Yo {name}, just vibing with your vibe. This is what friendship is about! 🎵",
+        "{name}, peaceful moments with you >>> everything else. Keep being awesome! 🌙",
+        "{name}, sometimes the best times are the quiet ones. This is perfect! 🍃"
+    ]
+};
+
+// Special Message Types
+const memoryLane = [
+    "Remember when we {memory}, {name}? Those were the days! 🌟",
+    "{name}, thinking about the time we {memory} - still makes me smile! 😊",
+    "Hey {name}, never forget when we {memory} together! Pure gold! ✨",
+    "{name}, that moment when we {memory}? Peak friendship right there! 💫"
+];
+
+const memories = [
+    "had that epic adventure",
+    "laughed until we cried",
+    "made those crazy plans at 2 AM",
+    "discovered that amazing place",
+    "shared our biggest secrets",
+    "pulled that all-nighter",
+    "went on that spontaneous trip",
+    "had the best conversation ever"
+];
+
+const compliments = [
+    "{name}, the way you {trait}? Absolutely incredible! 🌟",
+    "You know what {name}? Your ability to {trait} is genuinely inspiring! 💖",
+    "{name}, never stop being someone who can {trait} - it's your superpower! ⚡",
+    "Dear {name}, watching you {trait} reminds me why you're amazing! ✨"
+];
+
+const traits = [
+    "light up every room",
+    "stay true to yourself",
+    "make everyone feel special",
+    "never give up on your dreams",
+    "spread kindness everywhere you go",
+    "always find the silver lining",
+    "lift others up",
+    "stay authentic no matter what"
+];
+
+const futurePredictions = [
+    "{name}, I predict we'll be causing trouble together for at least 50 more years! 🚀",
+    "Future forecast for {name}: More laughs, more adventures, more unforgettable memories! 🌈",
+    "Prediction: {name} and I are going to have the BEST stories to tell someday! 📖",
+    "{name}, crystal ball says: our friendship only gets better from here! 🔮",
+    "Fortune sees {name} and I living our best lives together! The future is BRIGHT! ☀️"
+];
+
+const gratitudeMoments = [
+    "{name}, grateful for you today and every day. You make life better! 🙏",
+    "Thank you for being YOU, {name}. My life is richer because you're in it! 💕",
+    "{name}, just wanted to say: I appreciate you more than words can express! ✨",
+    "Dear {name}, thankful doesn't even begin to cover it. You're a gift! 🎁",
+    "{name}, in a world of chaos, you're my constant. Thank you for existing! 💙"
 ];
 
 // Elements
+const welcomeScreen = document.getElementById('welcomeScreen');
+const moodScreen = document.getElementById('moodScreen');
+const cookieScreen = document.getElementById('cookieScreen');
+const nameInput = document.getElementById('nameInput');
+const continueBtn = document.getElementById('continueBtn');
+const displayName = document.getElementById('displayName');
+const moodBtns = document.querySelectorAll('.mood-btn');
 const cookie = document.getElementById('cookie');
 const cookieWrapper = document.getElementById('cookieWrapper');
 const fortuneContainer = document.getElementById('fortuneContainer');
@@ -44,9 +154,42 @@ window.addEventListener('resize', () => {
 });
 
 // State
+let userName = '';
+let userMood = '';
 let isCracked = false;
 let cookieCount = 0;
 let particles = [];
+
+// Name Input Handler
+nameInput.addEventListener('input', () => {
+    continueBtn.disabled = nameInput.value.trim().length === 0;
+});
+
+continueBtn.addEventListener('click', () => {
+    userName = nameInput.value.trim();
+    if (userName) {
+        displayName.textContent = userName;
+        welcomeScreen.classList.add('hidden');
+        moodScreen.classList.remove('hidden');
+    }
+});
+
+// Allow Enter key to continue
+nameInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && !continueBtn.disabled) {
+        continueBtn.click();
+    }
+});
+
+// Mood Selection
+moodBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        userMood = btn.dataset.mood;
+        moodScreen.classList.add('hidden');
+        cookieScreen.classList.remove('hidden');
+        stats.classList.add('show');
+    });
+});
 
 // Particle Class
 class Particle {
@@ -73,7 +216,6 @@ class Particle {
         ctx.fillStyle = this.color;
         ctx.fill();
         
-        // Glow effect
         ctx.shadowBlur = 10;
         ctx.shadowColor = this.color;
         ctx.fill();
@@ -145,6 +287,49 @@ function createSparkles() {
     }
 }
 
+// Generate Personalized Fortune
+function generateFortune() {
+    let fortune = '';
+    const messageTypes = ['mood', 'memory', 'compliment', 'prediction', 'gratitude', 'inside-joke'];
+    const randomType = messageTypes[Math.floor(Math.random() * messageTypes.length)];
+    
+    switch(randomType) {
+        case 'mood':
+            const moodMessages = moodFortunes[userMood] || moodFortunes.happy;
+            fortune = moodMessages[Math.floor(Math.random() * moodMessages.length)];
+            break;
+            
+        case 'memory':
+            const memTemplate = memoryLane[Math.floor(Math.random() * memoryLane.length)];
+            const memory = memories[Math.floor(Math.random() * memories.length)];
+            fortune = memTemplate.replace('{memory}', memory);
+            break;
+            
+        case 'compliment':
+            const compTemplate = compliments[Math.floor(Math.random() * compliments.length)];
+            const trait = traits[Math.floor(Math.random() * traits.length)];
+            fortune = compTemplate.replace('{trait}', trait);
+            break;
+            
+        case 'prediction':
+            fortune = futurePredictions[Math.floor(Math.random() * futurePredictions.length)];
+            break;
+            
+        case 'gratitude':
+            fortune = gratitudeMoments[Math.floor(Math.random() * gratitudeMoments.length)];
+            break;
+            
+        case 'inside-joke':
+            const jokeTemplate = insideJokes[Math.floor(Math.random() * insideJokes.length)];
+            const joke = jokes[Math.floor(Math.random() * jokes.length)];
+            fortune = jokeTemplate.replace('{joke}', joke);
+            break;
+    }
+    
+    // Replace {name} with actual user name
+    return fortune.replace(/{name}/g, userName);
+}
+
 // Crack Cookie
 function crackCookie() {
     if (isCracked) return;
@@ -153,32 +338,23 @@ function crackCookie() {
     cookieCount++;
     cookieCountEl.textContent = cookieCount;
     
-    // Add crack animation
     cookie.classList.add('cracked');
-    
-    // Create sparkles
     createSparkles();
     
-    // Create particle explosion
     const rect = cookieWrapper.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
     createParticleExplosion(centerX, centerY);
     
-    // Show fortune after delay
     setTimeout(() => {
-        const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
-        fortuneText.textContent = randomFortune;
+        const personalizedFortune = generateFortune();
+        fortuneText.textContent = personalizedFortune;
         fortuneContainer.classList.add('show');
-        
-        // Create another particle burst
         createParticleExplosion(centerX, centerY);
     }, 800);
     
-    // Show buttons and stats
     setTimeout(() => {
         resetBtn.classList.add('show');
-        stats.classList.add('show');
     }, 1200);
 }
 
@@ -200,24 +376,15 @@ resetBtn.addEventListener('click', resetCookie);
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        if (!isCracked) {
+        if (!isCracked && cookieScreen && !cookieScreen.classList.contains('hidden')) {
             crackCookie();
-        } else {
+        } else if (isCracked) {
             resetCookie();
         }
     }
 });
 
-// Add hover sound effect (optional - uncomment to enable)
-/*
-cookieWrapper.addEventListener('mouseenter', () => {
-    // You can add an audio file here
-    // const hoverSound = new Audio('hover.mp3');
-    // hoverSound.play();
-});
-*/
-
-// Continuous star twinkling effect
+// Twinkle effect
 function createTwinkle() {
     const twinkle = document.createElement('div');
     twinkle.style.position = 'fixed';
@@ -237,7 +404,6 @@ function createTwinkle() {
     setTimeout(() => twinkle.remove(), 2000);
 }
 
-// Add CSS for twinkle animation
 const style = document.createElement('style');
 style.textContent = `
     @keyframes twinkle {
@@ -247,7 +413,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Create random twinkles
 setInterval(createTwinkle, 300);
 
 // Create floating background stars
@@ -263,22 +428,7 @@ function createFloatingStars() {
     }
 }
 
-// Initialize floating stars on page load
 createFloatingStars();
-
-// Add cursor trail effect (optional)
-let mouseX = 0;
-let mouseY = 0;
-
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    
-    // Randomly create small particles following cursor
-    if (Math.random() > 0.95) {
-        particles.push(new Particle(mouseX, mouseY, '#ffffff'));
-    }
-});
 
 // Console Easter Egg
 console.log('%c✨ Fortune Cookie Magic! ✨', 'font-size: 20px; color: #ff6b9d; font-weight: bold;');
